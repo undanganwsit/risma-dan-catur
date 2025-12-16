@@ -693,7 +693,8 @@ section {
   margin-left: 20px;
   flex: 1;
   box-shadow: 0 6px 15px rgba(0,0,0,0.15);
-  width: 300px; /* fix */
+  width: 250px; /* fix */
+    text-align: left;   /* 🔥 bikin teks rata kiri */
 }
 
 /* Judul dalam box */
