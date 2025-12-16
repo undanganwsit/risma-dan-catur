@@ -629,39 +629,103 @@ section {
 }
 
 
-/* Frame setengah lingkaran atas */
-.love-story-frame {
-  background: #e0942a;
-  margin: 30px 0;
-  padding: 30px 20px;
-  box-shadow: 0 6px 15px rgba(0,0,0,0.15);
-  position: relative;
-  overflow: hidden;
-
-  height: 350px; /* sedikit lebih tinggi biar muat teks */
-  max-width: 300px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-
-  border-radius: 50% 50% 0 0 / 40% 40% 0 0; /* lengkung atas */
+/* ===== LOVE STORY (TANPA BG) ===== */
+.love-story-section {
+  padding: 60px 20px;
+  background: transparent; /* PENTING: transparan */
 }
 
-/* Title */
-.love-story-title {
+/* Judul */
+.love-story-heading {
   font-family: 'Great Vibes', cursive;
-  font-size: 32px;
+  font-size: 36px;
   color: #fff;
-  margin-bottom: 15px;
+  text-align: center;
+  margin-bottom: 40px;
 }
 
-/* Isi cerita */
-.love-story-text {
+/* Timeline wrapper */
+.timeline {
+  max-width: 650px;
+  margin: 0 auto;
+  position: relative;
+}
+
+/* Garis timeline (kuning) */
+.timeline::before {
+  content: "";
+  position: absolute;
+  left: 18px;
+  top: 0;
+  width: 2px;
+  height: 100%;
+  background: #e0942a;
+  opacity: 0.8;
+}
+
+/* Item */
+.timeline-item {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 32px;
+  position: relative;
+}
+
+/* Icon bulat kiri */
+.timeline-dot {
+  width: 36px;
+  height: 36px;
+  background: #e0942a;
+  color: #fff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  z-index: 2;
+}
+
+/* Kotak putih */
+.timeline-box {
+  background: #e0942a;
+  border-radius: 18px;
+  padding: 18px 20px;
+  margin-left: 20px;
+  flex: 1;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.15);
+  width: 300px; /* fix */
+}
+
+/* Judul dalam box */
+.timeline-box h3 {
+  margin: 0;
+  font-size: 18px;
+  font-weight: 600;
+  color: #fff;
+}
+
+/* Tanggal */
+.timeline-date {
+  display: block;
+  font-size: 14px;
+  color: #fff;
+  margin: 6px 0 12px;
+}
+
+/* Isi teks */
+.timeline-box p {
   font-size: 14px;
   line-height: 1.6;
   color: #fff;
-  padding: 0 10px;
 }
+
+/* Audio */
+.timeline-audio {
+  width: 100%;
+  margin-top: 10px;
+  accent-color: #e0942a; /* warna kontrol audio */
+}
+
 
 #love-story {
   position: relative;
